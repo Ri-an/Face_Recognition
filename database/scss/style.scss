@@ -1,0 +1,96 @@
+$red: #DB3E3D;
+$white:#FFFFFF;
+$yellow:#F8D245;
+$orange:#F7A703;
+$green:#1FE8B6;
+
+body{
+  background: #27283B;
+}
+
+.parrot{
+  position:absolute;
+  transform: translate(-50%, -50%);
+  top:50%;
+  left:50%;
+  width:200px;
+  height:200px;
+  cursor:pointer;
+  .big{
+    position:absolute;
+    top:0;
+    left:0;
+    transform: translate(-50%, -50%);
+    transform:rotate(45deg);
+    transition:.5s;
+    border-radius: 50%;
+    border-right-color: transparent;
+    border-top-color: transparent;
+    border-bottom-color: darken($red,5%);
+    border-left-color:$red;
+    border-width: 100px;
+    border-style: solid;
+  }  
+  .middle{
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+    transform:rotate(45deg);
+    transition:.5s;
+    border-radius: 50%;
+    border-right-color: transparent;
+    border-top-color: $yellow;
+    border-bottom-color: darken($white, 5%);
+    border-left-color:$white;
+    border-width: 80px;
+    border-style: solid;
+  }
+  .small{
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    transform:rotate(45deg);
+    transition:.5s;
+    border-radius: 50%;
+    border-right-color: $orange;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color:transparent;
+    border-width: 40px;
+    border-style: solid;
+    &:before{
+      position: absolute;
+      content:"";
+      width: 20px;
+      height:20px;
+      top:-10px;
+      left:-40px;
+      border-radius:50%;
+      background:#000;
+    }
+  }
+  &:hover,&:focus{ 
+    .big{
+      transform:rotate(225deg);
+      border-bottom-color: $green;
+      border-left-color:darken($green,5%);
+    }
+    .middle{
+      transform:rotate(-135deg);
+      border-right-color: $yellow;
+      border-top-color: transparent;
+      border-bottom-color: $white;
+      border-left-color: darken($white, 5%);
+    }
+    .small{
+      transform:rotate(135deg);
+      border-right-color: dareken($orange);
+      border-top-color: transparent;
+      border-bottom-color: transparent;
+      border-left-color:transparent;
+    }
+  }
+}
+

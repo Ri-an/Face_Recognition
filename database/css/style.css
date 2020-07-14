@@ -1,0 +1,202 @@
+
+@font-face {
+        font-family: 'breakregular';
+        src: url('break_regular.woff2') format('woff2'),
+             url('break_regular.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+      }
+
+body {
+  background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("back7.jpg");
+  background-size:cover;
+  font-family: 'breakregular';
+  font-weight: normal;
+  font-style: normal;
+}
+
+#canvas{
+        display:none;
+}
+
+#video {
+        border-top-right-radius: 35px;
+        border-bottom-left-radius: 35px;
+}
+
+.center {
+        display: flex;
+        margin: 0 auto;
+        align-self: center;
+        text-align: center;
+}
+
+button{
+        border:rgba(0,0,0,0.4);
+        border-radius: 10px;
+        padding: 10px;
+        margin-left: 725px;
+        font-size: 22px;
+        margin-top: 30px;
+        font-family: inherit;
+        background-color: rgba(0,0,0,0.4);
+        color: #f2f2f2;
+}
+
+.parrot {
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 200px;
+  cursor: pointer;
+}
+.parrot .big {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  transition: .5s;
+  border-radius: 50%;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  border-bottom-color: #d72928;
+  border-left-color: #DB3E3D;
+  border-width: 100px;
+  border-style: solid;
+}
+.parrot .middle {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  transition: .5s;
+  border-radius: 50%;
+  border-right-color: transparent;
+  border-top-color: #F8D245;
+  border-bottom-color: #f2f2f2;
+  border-left-color: #FFFFFF;
+  border-width: 80px;
+  border-style: solid;
+}
+.parrot .small {
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  transition: .5s;
+  border-radius: 50%;
+  border-right-color: #F7A703;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  border-width: 40px;
+  border-style: solid;
+}
+.parrot .small:before {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 20px;
+  top: -10px;
+  left: -40px;
+  border-radius: 50%;
+  background: #000;
+}
+.parrot:hover .big, .parrot:focus .big {
+  -webkit-transform: rotate(225deg);
+          transform: rotate(225deg);
+  border-bottom-color: #1FE8B6;
+  border-left-color: #16d7a7;
+}
+.parrot:hover .middle, .parrot:focus .middle {
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+  border-right-color: #F8D245;
+  border-top-color: transparent;
+  border-bottom-color: #FFFFFF;
+  border-left-color: #f2f2f2;
+}
+.parrot:hover .small, .parrot:focus .small {
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+  border-right-color: dareken(#F7A703);
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+
+.col{
+        display: grid;
+  grid-template-columns: 50% 50%; 
+  text-align: center;
+  color: #fff;
+}
+
+.content-title {
+        color: #FFFFFF;
+        padding: 15px;
+        text-align: center;
+        font-size: 12vh;
+        line-height: 1.4;
+      }
+
+.content-subtitle1 {
+        font-family: 'breakregular';
+  font-weight: normal;
+  font-style: normal;
+        color: #FFFFFF;
+        padding: 15px;
+        text-align:center;
+        font-size: 4vh;
+        line-height: 1.2;
+        margin-top: 250px;
+        text-decoration: none;
+}
+
+.content-subtitle2 {
+        font-family: 'breakregular';
+  font-weight: normal;
+  font-style: normal;
+        color: #FFFFFF;
+        padding: 15px;
+        text-align:center;
+        font-size: 4vh;
+        line-height: 1.2;
+        margin-top:-100px;
+        text-decoration: none;
+}
+
+.item1{
+        margin-top: 65px;
+        margin-left: 250px;
+        align-self: center;
+        font-size: 10px;
+        font-family: 'moon';
+        padding: 10px;
+        font-weight: 10;
+        text-transform: none;
+        text-align: justify;
+      }
+
+.item2{
+        margin-top: 75px;
+        margin-left: 300px;
+        font-size: 10px;
+        font-family: 'moon';
+        padding: 0%;
+        font-weight: 10;
+        text-transform: none;
+        text-align: justify;
+}
